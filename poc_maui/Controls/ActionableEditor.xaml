@@ -4,7 +4,7 @@
              x:Class="poc_maui.Controls.ActionableEditor"
              x:Name="actionableEditor">
 
-    <Frame Padding="3,1" BorderColor="LightSlateGray" BindingContext="{x:Reference actionableEditor}">
+    <Frame x:Name="frame" Padding="3,1" BorderColor="LightSlateGray" BindingContext="{x:Reference actionableEditor}">
         <Grid RowDefinitions="*" ColumnDefinitions="*, Auto">
             <Editor x:Name="editorControl"
                     Grid.Column="0"
@@ -15,16 +15,17 @@
                     Unfocused="OnEditorUnfocused"
                     VerticalOptions="Fill"
                     HorizontalOptions="Fill" />
-            <ImageButton x:Name="imageButton"
-                         Grid.Column="1"
-                         BackgroundColor="Orange"
-                         Command="{Binding Path=ButtonCommand}"
-                         CommandParameter="{Binding Path=ButtonCommandParameter}"
-                         IsVisible="{Binding Path=IsButtonVisible}"
-                         VerticalOptions="Center"
-                         HeightRequest="25"
-                         WidthRequest="25"
-                         HorizontalOptions="End" />
+            <Button x:Name="imageButton"
+                    Grid.Column="1"
+                    Text="Add"
+                    FontSize="Small"
+                    Command="{Binding Path=ButtonCommand}"
+                    CommandParameter="{Binding Path=ButtonCommandParameter}"
+                    IsVisible="{Binding Path=IsButtonVisible}"
+                    VerticalOptions="Center"
+                    HeightRequest="25"
+                    WidthRequest="60"
+                    HorizontalOptions="End" />
         </Grid>
     </Frame>
 

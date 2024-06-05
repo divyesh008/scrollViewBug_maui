@@ -6,8 +6,8 @@ public partial class ActionableEditor : ContentView
     private int _maxCharactersForTruncatedText;
 
     public ActionableEditor()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         if (DeviceInfo.Idiom == DeviceIdiom.Tablet)
         {
