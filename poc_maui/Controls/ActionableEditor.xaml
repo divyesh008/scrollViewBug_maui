@@ -15,17 +15,16 @@
                     Unfocused="OnEditorUnfocused"
                     VerticalOptions="Fill"
                     HorizontalOptions="Fill" />
-            <Button x:Name="imageButton"
-                    Grid.Column="1"
-                    Text="Add"
-                    FontSize="Small"
-                    Command="{Binding Path=ButtonCommand}"
-                    CommandParameter="{Binding Path=ButtonCommandParameter}"
-                    IsVisible="{Binding Path=IsButtonVisible}"
-                    VerticalOptions="Center"
-                    HeightRequest="25"
-                    WidthRequest="60"
-                    HorizontalOptions="End" />
+            <ImageButton x:Name="imageButton"
+                         Grid.Column="1"
+                         BackgroundColor="Orange"
+                         Command="{Binding Path=ButtonCommand}"
+                         CommandParameter="{Binding Path=ButtonCommandParameter}"
+                         IsVisible="{Binding Path=IsButtonVisible}"
+                         VerticalOptions="Center"
+                         HeightRequest="25"
+                         WidthRequest="25"
+                         HorizontalOptions="End" />
         </Grid>
     </Frame>
 
